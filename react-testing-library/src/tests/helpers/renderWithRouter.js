@@ -1,14 +1,15 @@
-import React from 'react';
-import {MemoryRouter} from "react-router-dom";
+import React from "react";
+import { MemoryRouter } from "react-router-dom";
 import AppRouter from "../../router/AppRouter";
+import { render } from "@testing-library/react";
 
-const RenderWithRouter = (component, initialRoute = '/') => {
-    return (
-        <MemoryRouter initialEntries={[initialRoute]}>
-            <AppRouter />
-            {component}
-        </MemoryRouter>
-    );
+const renderWithRouter = (component, initialRoute = "/") => {
+  return render(
+    <MemoryRouter initialEntries={[initialRoute]}>
+      <AppRouter />
+      {component}
+    </MemoryRouter>,
+  );
 };
 
-export default RenderWithRouter;
+export default renderWithRouter;

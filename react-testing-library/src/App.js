@@ -1,13 +1,13 @@
-import {useState, useEffect} from "react";
-import './App.css';
-import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
-import MainPage from "./pages/MainPage";
-import AboutPage from "./pages/AboutPage";
-import ErrorPage from "./pages/ErrorPage";
-import UserDetailsPage from "./pages/UserDetailsPage";
-import Users from "./users/Users";
+// import {useState, useEffect} from "react";
+import "./App.css";
+// import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
+// import MainPage from "./pages/MainPage";
+// import AboutPage from "./pages/AboutPage";
+// import ErrorPage from "./pages/ErrorPage";
+// import UserDetailsPage from "./pages/UserDetailsPage";
+// import Users from "./users/Users";
 import AppRouter from "./router/AppRouter";
-
+import NavBar from "./components/NavBar/NavBar";
 // function App() {
 //     const [data, setData] = useState(null);
 //     const [toggle, setToggle] = useState(false);
@@ -34,12 +34,12 @@ import AppRouter from "./router/AppRouter";
 // }
 
 function App() {
-    return <>
-        <Link to="/" data-testid="main-link">Main page</Link>
-        <Link to="/about" data-testid="about-link">About page</Link>
-        <Link to="/users" data-testid="users-link">Users page</Link>
-        <AppRouter />
+  return (
+    <>
+      <NavBar />
+      <AppRouter />
     </>
+  );
 }
 
 export default App;
